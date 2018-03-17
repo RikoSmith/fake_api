@@ -1,0 +1,29 @@
+[
+  '{{repeat(100, 200)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    sid: '{{integer(201200000, 201799999)}}',
+    picture: 'http://placehold.it/32x32',
+    age: '{{integer(20, 40)}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    email: '{{email()}}',
+    phone: '+7 {{phone()}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    about: '{{lorem(1, "paragraphs")}}',
+    year: '{{integer(1,5)}}',
+    school: '{{integer(1,5)}}',
+    p_major: '{{random("Mech Engineering" , "Civil Engineering","Electrical Engineering","Chemical Engineering","Computer Science","Robotics","Biology","Chemistry","Math","Physics","Economics","PS/IR","Antropolgy","History","Sociology","WLL")}}',
+    s_major:  '{{random("None", "Mech Engineering","Civil Engineering","Electrical Engineering","Chemical Engineering","Computer Science","Robotics","Biology","Chemistry","Math","Physics","Economics","PS/IR","Antropolgy","History","Sociology","WLL")}}',
+    minor:  '{{random("None", "Mech Engineering","Civil Engineering","Electrical Engineering","Chemical Engineering","Computer Science","Robotics","Biology","Chemistry","Math","Physics","Economics","PS/IR","Antropolgy","History","Sociology","WLL")}}',
+  adm_year: '{{integer(2010, 2018)}}',
+  adm_semester: '{{random("Spring", "Summer", "Fall")}}',
+    courses: [
+      '{{repeat(integer(0, 38))}}',
+      {
+        courseid: '{{integer(1000, 5000)}}'
+      }
+    ]
+  }
+]
